@@ -4,6 +4,8 @@ import { FiPlusSquare } from 'react-icons/fi';
 import { Container } from './styles';
 
 import Logo from '../../assets/logo.svg';
+import Modal from '../Modal';
+import ModalAddFood from '../ModalAddFood';
 
 interface IHeaderProps {
   openModal: () => void;
@@ -17,9 +19,7 @@ const Header: React.FC<IHeaderProps> = ({ openModal }) => (
         <div>
           <button
             type="button"
-            onClick={() => {
-              /* TODO OPEN MODAL */
-            }}
+            onClick={openModal}
           >
             <div className="text">Novo Prato</div>
             <div className="icon">
